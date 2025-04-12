@@ -1,5 +1,5 @@
 import Link from "next/link";
-import FametonicICon from "./icons/fametonic-icon";
+import Logo from "./icons/logo";
 import MenubarIcon from "./icons/menubar-icon";
 
 type NavItem = {
@@ -35,13 +35,16 @@ export default function Navbar({
 
         {/* Brand logo */}
         <div className="flex items-center">
-          <Link href="/" className="flex items-center">
-            <FametonicICon />
+          <Link href="/" className="flex items-center" aria-label="Home page">
+            <Logo />
           </Link>
         </div>
 
         {/* Primary navigation - desktop only */}
-        <nav className="hidden items-center space-x-6 md:flex">
+        <nav
+          className="hidden items-center space-x-6 md:flex"
+          aria-label="Main navigation"
+        >
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -57,11 +60,11 @@ export default function Navbar({
         <div className="block md:hidden">
           <button
             className="p-2 text-white"
-            aria-label="Toggle menu"
+            aria-label="Toggle main navigation menu"
             aria-expanded="false"
           >
             <MenubarIcon />
-            <span className="sr-only">Menu</span>
+            <span className="sr-only">Toggle main navigation menu</span>
           </button>
         </div>
       </div>
