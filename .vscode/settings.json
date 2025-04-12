@@ -1,0 +1,9 @@
+{
+  "cSpell.words": [
+    "Fametonic",
+    "figtree"
+  ],
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }
+}
